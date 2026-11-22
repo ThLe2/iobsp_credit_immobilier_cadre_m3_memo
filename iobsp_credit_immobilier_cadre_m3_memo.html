@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche mémo — L&#x27;organisation de la publicité foncière</title><style>
+:root{--prune:#8C1E70;--prune-fonce:#5E1349;--prune-clair:#F4E6EE;--accent:#C77BAA;
+ --vert:#283C28;--gris:#3C3C3C;--gris-moyen:#8A7A85;--filet:#E8DCE5;--creme:#FAF6F8;
+ --ok:#2F7A4F;--ko:#B23B3B;--amb:#B5852A;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--gris);
+ font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.62}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 60px}
+header.bandeau{background:var(--prune-fonce);color:#fff;padding:18px 0;border-bottom:4px solid var(--accent)}
+header.bandeau .wrap{padding-bottom:0}
+.chapitre{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#EAD3E3}
+.chapitre span{color:var(--accent);margin:0 6px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.25;margin:8px 0 4px;color:#fff}
+.sous{color:#EAD3E3;font-size:14.5px;margin:0}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:20px;color:var(--prune-fonce);
+ margin:34px 0 0;padding-bottom:8px;border-bottom:2px solid var(--filet)}
+h2 .num{color:var(--accent);margin-right:8px}
+h3{font-size:15px;color:var(--vert);margin:20px 0 8px;letter-spacing:.02em}
+.carte{background:#fff;border:1px solid var(--filet);border-radius:10px;padding:20px 22px;margin:18px 0;
+ box-shadow:0 1px 2px rgba(94,19,73,.05)}
+.enc{background:var(--prune-clair);border-left:5px solid var(--prune);padding:14px 18px;
+ border-radius:0 8px 8px 0;margin:18px 0;font-size:15.2px}
+.enc .t{display:block;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+ font-weight:800;color:var(--prune-fonce);margin-bottom:6px}
+.enc.al{background:#FBF4F4;border-left-color:var(--ko)}.enc.al .t{color:var(--ko)}
+.enc.ci{background:#FCF8F0;border-left-color:var(--amb)}.enc.ci .t{color:#8A6418}
+.situ{background:#FCF9FB;border:1px dashed var(--filet);border-radius:8px;padding:16px 18px;margin:16px 0;font-size:15.2px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}
+.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:7px;font-size:14.5px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.quad>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:12px 13px;font-size:13.6px}
+.quad .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13px;
+ text-transform:uppercase;letter-spacing:.04em}
+.tri .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;
+ text-transform:uppercase;letter-spacing:.05em}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.8px;background:#fff}
+th,td{border:1px solid var(--filet);padding:9px 12px;text-align:left}
+thead th{background:var(--prune-clair);color:var(--prune-fonce);font-size:13.5px}
+tbody th{font-weight:600;color:var(--gris)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td,tr.tot th{background:#FBF3F8;font-weight:800;color:var(--prune-fonce)}
+.dl{display:inline-flex;align-items:center;gap:9px;background:var(--prune);color:#fff;text-decoration:none;
+ padding:11px 20px;border-radius:8px;font-weight:700;font-size:15px;margin:20px 0 4px}
+.dl:hover{background:var(--prune-fonce)}
+ol.q{padding-left:0;list-style:none;counter-reset:q}
+ol.q>li{margin:16px 0;padding-left:38px;position:relative}
+ol.q>li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:1px;
+ width:26px;height:26px;border-radius:50%;background:var(--prune-clair);color:var(--prune-fonce);
+ font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+b,strong{color:var(--vert)}
+footer{text-align:center;font-size:12.5px;color:var(--gris-moyen);padding:26px 18px 12px;
+ border-top:1px solid var(--filet);margin-top:44px}
+@media(max-width:860px){.quad{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.duo,.tri,.quad{grid-template-columns:1fr}h1{font-size:22px}}
+@media print{body{background:#fff}.dl{display:none}header.bandeau{background:#5E1349 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+td{vertical-align:top}td:first-child{white-space:nowrap}.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}.tri .h,.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;text-transform:uppercase;letter-spacing:.05em}.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}@media(max-width:640px){.tri,.duo{grid-template-columns:1fr}}.enc,tr,.tri,.duo{break-inside:avoid}
+.enc p,.cols p{margin:6px 0}.enc.ok{background:#F1F7F3;border-left-color:var(--ok)}.enc.ok .t{color:var(--ok)}
+.cols{display:grid;gap:14px;margin:16px 0}.cols.c2{grid-template-columns:1fr 1fr}.cols.c3{grid-template-columns:repeat(3,1fr)}.cols.c4{grid-template-columns:repeat(4,1fr)}.cols.c5,.cols.c6{grid-template-columns:repeat(3,1fr)}
+.cols>div>.enc{margin:0;height:100%}.cols table{margin:0}
+p.src{font-size:12.5px;color:var(--gris-moyen);line-height:1.5}
+td,th{vertical-align:top}
+@media(max-width:760px){.cols.c2,.cols.c3,.cols.c4,.cols.c5,.cols.c6{grid-template-columns:1fr}}
+table.frise{table-layout:fixed;font-size:13px}.enc h3{margin:2px 0 8px;font-family:Georgia,serif;color:var(--prune-fonce);font-size:16px}
+.cols>div>.enc{margin:0}
+
+/* Frise et cartes (remplacent les tableaux « frise » issus de la conversion du PDF) */
+.etapes{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:16px 0;counter-reset:etape}
+.etape{position:relative;background:#fff;border:1px solid var(--filet);border-top:4px solid var(--prune);border-radius:8px;padding:12px 12px 11px;font-size:14px;line-height:1.4;color:var(--gris)}
+.etape .tt{display:block;font-weight:800;color:var(--prune-fonce);margin-bottom:5px;font-size:14.5px;line-height:1.25}
+.etape .ref{display:block;margin-top:6px;font-size:12.5px;color:var(--gris-moyen)}
+.etapes.ordre .etape{padding-top:26px}
+.etapes.ordre .etape::before{counter-increment:etape;content:counter(etape);position:absolute;top:-13px;left:12px;width:24px;height:24px;border-radius:50%;background:var(--prune);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.etape.vente{border-top-color:#2E5C8A}.etape.vente .tt{color:#1F4468}.etapes.ordre .etape.vente::before{background:#2E5C8A}
+.etape.alerte{border-top-color:var(--ko)}.etape.alerte .tt{color:var(--ko)}
+@media (max-width:900px){.etapes{grid-template-columns:repeat(3,1fr);row-gap:22px}}@media (max-width:520px){.etapes{grid-template-columns:repeat(2,1fr)}}
+.legende{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--gris);margin:-4px 0 14px}
+.legende span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--prune)}
+.legende .vente::before{background:#2E5C8A}
+</style></head><body>
+<header class="bandeau"><div class="wrap"><div class="chapitre">IOBSP NIVEAU 2 · JOURNÉE 5 · CRÉDIT IMMOBILIER (1/3) — MODULE 3</div><h1>L&#x27;organisation de la publicité foncière</h1><p class="sous">Fiche mémo détaillée — rendre public pour rendre opposable</p></div></header>
+<main class="wrap"><a class="dl" href="J5_M3_Fiche_memo.pdf" download>⬇ Télécharger la fiche mémo (PDF)</a>
+<div class="enc"><span class="t">AVERTISSEMENT — LE TEXTE APPLICABLE</span><div class="enc al"><p>Le droit en vigueur est le <b>DÉCRET N° 55-22 DU 4 JANVIER 1955</b>. Une réforme d&#x27;ampleur a été publiée le 19 juin 2024: elle est <b>DEVENUE CADUQUE</b> et n&#x27;est pas la réponse attendue à l&#x27;examen. Voir la section 8.</p></div></div>
+<h2>1 · À quoi sert la publicité foncière</h2>
+<div class="cols c3"><div><div class="enc"><h3>Informer</h3><p>Le registre est <b>public</b>: toute personne intéressée peut savoir qui est propriétaire et quelles charges pèsent sur le bien</p></div></div><div><div class="enc"><h3>Rendre opposable</h3><p><b>L&#x27;effet principal.</b> Un droit non publié existe entre les parties mais ne peut être opposé aux <b>tiers</b></p></div></div><div><div class="enc"><h3>Sécuriser</h3><p>La <b>traçabilité des mutations</b> rend les transactions fiables</p></div></div></div>
+<div class="enc"><p><b>LE POINT ESSENTIEL — ELLE N&#x27;EST PAS CONSTITUTIVE DE DROITS</b></p><p><b>La publicité foncière ne crée rien, ne donne rien: elle rend opposable.</b><br><i>Deux personnes achètent successivement le même appartement au même vendeur.</i> Les deux ventes sont valables entre les parties. <b>Celle qui l&#x27;emporte</b> <b>n&#x27;est pas la première signée: c&#x27;est la PREMIÈRE PUBLIÉE</b> — non parce que la publication a créé la propriété, mais parce qu&#x27;elle seule est <b>opposable</b> à l&#x27;autre acquéreur, qui est un tiers.<br><b>La publicité foncière ne fabrique pas le droit: elle décide qui peut s&#x27;en prévaloir.</b></p></div>
+<h2>2 · Le service et le fichier</h2>
+<table><thead><tr><th><b>Élément</b></th><th><b>Contenu</b></th></tr></thead><tbody><tr><td><b>Le service</b></td><td>Le <b>service de la publicité foncière (SPF)</b>, qui a succédé au <b>CONSERVATEUR DES HYPOTHÈQUES le 1 er JANVIER 2013</b>. L&#x27;appellation « conservation des hypothèques» <b>n&#x27;a plus cours</b> depuis plus de dix ans</td></tr><tr><td><b>Le fichier immobilier</b></td><td>Présente la <b>situation juridique des immeubles</b> telle qu&#x27;elle résulte des documents publiés. Organisé <b>par immeuble ET par</b> <b>personne</b>: quelles charges pèsent sur ce bien, quels biens possède cette personne</td></tr><tr><td><b>Ce qu&#x27;on en tire</b></td><td>L&#x27;<b>ÉTAT HYPOTHÉCAIRE</b> — la pièce qui dit si le bien est déjà grevé, et de combien</td></tr></tbody></table>
+<h2>3 · Ce qui doit être publié</h2>
+<p>Règle générale: <b>tous les actes opérant transfert ou constitution de droits réels immobiliers</b>.</p>
+<p><b>Actes soumis à publicité (régime actuel)</b></p>
+<div class="enc"><p>Ventes immobilières · donations · successions · <b>hypothèques et leurs radiations</b> · servitudes · actes constitutifs de copropriété · divisions parcellaires · saisies immobilières et commandements valant saisie · <b>baux d&#x27;une durée supérieure à 12 ans</b></p></div>
+<div class="enc"><span class="t">UNE NUANCE JURISPRUDENTIELLE</span><p>Lorsqu&#x27;un type d&#x27;acte <b>n&#x27;est pas énuméré</b> par le décret, le défaut de publicité n&#x27;entraîne pas nécessairement l&#x27;inopposabilité. <b>La liste compte.</b></p></div>
+<h2>4 · Les deux principes de la publication</h2>
+<table><thead><tr><th><b>Principe</b></th><th><b>Contenu et conséquence</b></th></tr></thead><tbody><tr><td><b>L&#x27;AUTHENTICITÉ</b></td><td>Pour être publié, l&#x27;acte doit en principe être <b>authentique</b>, c&#x27;est-à-dire <b>notarié</b>. <i>Lien avec le module 2:</i> le monopole du notaire n&#x27;est pas une rente de situation — c&#x27;est la <b>condition d&#x27;accès au fichier immobilier</b></td></tr><tr><td><b>L&#x27;EFFET RELATIF</b> <b>art. 3 du décret</b></td><td><b>Aucun acte sujet à publicité ne peut être publié si le TITRE DU DISPOSANT, ou du dernier titulaire, n&#x27;a pas été préalablement</b> <b>publié.</b> Pour publier votre vente, il faut que l&#x27;acquisition de votre vendeur l&#x27;ait été; et pour celle-ci, celle de son propre vendeur. <b>Une</b> <b>chaîne ininterrompue de titres publiés</b></td></tr></tbody></table>
+<div class="enc"><p><b>LA CAUSE CLASSIQUE DE BLOCAGE D&#x27;UN DOSSIER</b></p><p><b>Si un maillon manque</b> — une succession non réglée, un titre jamais publié — <b>la publication est REFUSÉE</b>, et la vente ne peut pas aboutir tant que la chaîne n&#x27;est pas reconstituée.<br>Vous rencontrerez ce cas. Savoir de quoi il retourne évite de croire à un simple retard administratif.</p></div>
+<h2>5 · Le rang — ce qui décide si la banque est payée</h2>
+<p>Lorsque plusieurs créanciers sont inscrits sur le même immeuble, ils <b>ne sont pas égaux</b>: ils sont <b>classés</b>. En cas de vente forcée, <b>le premier inscrit est payé</b> <b>d&#x27;abord</b> sur le prix; le second ne reçoit que le reste; <b>le dernier ne reçoit souvent rien</b>.</p>
+<table><thead><tr><th><b>Règle</b></th><th><b>Contenu</b></th></tr></thead><tbody><tr><td><b>Principe</b></td><td>Le rang se détermine par la <b>DATE D&#x27;INSCRIPTION</b></td></tr><tr><td><b>Voir journée 6</b></td><td>L&#x27;<b>hypothèque légale spéciale du prêteur de deniers</b> prend rang à la <b>date de l&#x27;inscription</b>, et non plus rétroactivement au jour de la vente (réforme des sûretés du 15 septembre 2021)</td></tr></tbody></table>
+<div class="enc"><span class="t">LA RÈGLE DU MÊME JOUR — CONTRE-INTUITIVE, ET ELLE TOMBE</span><p>Lorsque plusieurs formalités sont requises <b>le même jour</b> sur le <b>même immeuble</b>: celle qui est requise en vertu du <b>TITRE DONT LA DATE EST LA PLUS</b> <b>ANCIENNE</b> est réputée d&#x27;un rang antérieur, <b>QUEL QUE SOIT L&#x27;ORDRE DU REGISTRE DES DÉPÔTS</b>.<br><b>Ce n&#x27;est pas l&#x27;heure de dépôt qui départage, c&#x27;est l&#x27;ancienneté du titre.</b> Un acte signé le lundi et déposé à 16 h prime un acte signé le mercredi et déposé le même jour à 9 h.</p></div>
+<h2>6 · Pourquoi ce module vous concerne</h2>
+<table><thead><tr><th><b>À quel titre</b></th><th><b>Ce que vous en faites</b></th></tr></thead><tbody><tr><td><b>La garantie de votre client</b></td><td>Elle sera <b>inscrite</b>: c&#x27;est l&#x27;inscription qui la rend opposable</td></tr><tr><td><b>Le rang</b></td><td>Il décidera si votre banque est <b>payée ou non</b> en cas de difficulté</td></tr><tr><td><b>L&#x27;état hypothécaire</b></td><td>Il fait partie des <b>pièces du dossier</b>: il révèle les charges existantes</td></tr><tr><td><b>Les frais</b></td><td>Émoluments, taxe de publicité foncière, contribution de sécurité immobilière, mainlevée — <b>traités en journée 6</b>, à jour du barème 2026</td></tr></tbody></table>
+<h2>7 · La frontière avec la journée 6</h2>
+<div class="enc ok"><span class="t">QUI TRAITE QUOI</span><p><b>Ce module (J 5 M3)</b> traite le <b>MÉCANISME</b>: le service, le fichier, l&#x27;inscription, le rang, l&#x27;opposabilité.<br><b>La journée 6</b> traite le <b>CHOIX</b> et le <b>COÛT</b> de la garantie: quelle sûreté retenir, et combien elle coûte.<br>Les deux se complètent et ne se recouvrent pas.</p></div>
+<h2>8 · La réforme de 2024 — publiée, puis CADUQUE</h2>
+<div class="enc"><p><b>Ordonnance n° 2024-562 du 19 juin 2024</b> <i>modifiant et codifiant le droit de la publicité foncière. Prise sur habilitation de la loi du 20 novembre 2023, elle</i> <i>reprenait l&#x27;essentiel des préconisations d&#x27;une commission remises au garde des Sceaux en 2018.</i></p></div>
+<table><thead><tr><th><b>Ce qu&#x27;elle prévoyait</b></th><th><b>Contenu</b></th></tr></thead><tbody><tr><td><b>Abrogation</b></td><td>Elle devait <b>abroger le décret du 4 janvier 1955</b></td></tr><tr><td><b>Codification</b></td><td>Transfert de la matière au <b>code civil, art. 710-1 à 710-47 nouveaux</b></td></tr><tr><td><b>Définition officielle</b></td><td>La publicité foncière devient « l&#x27;opération par laquelle l&#x27;état des droits réels portant sur les immeubles est rendu public, à des fins d&#x27;opposabilité aux tiers ou d&#x27;information»</td></tr><tr><td><b>Hypothèques</b></td><td>Modification des <b>art. 2421 et suivants</b> du code civil sur l&#x27;inscription</td></tr></tbody></table>
+<div class="enc al"><h2>LE POINT DÉCISIF — ELLE EST DEVENUE CADUQUE</h2><div class="enc al"><p>Le projet de loi de ratification devait être déposé avant le <b>20 septembre 2024</b>. Il ne l&#x27;a pas été: l&#x27;ordonnance est <b>caduque</b> (Constitution, art. 38) et n&#x27;entrera pas en vigueur. <b>C&#x27;est le décret de 1955 qui s&#x27;applique.</b><br><b>C&#x27;est l&#x27;INVERSE du réflexe pris à la journée 3.</b> Là-bas, une réforme datée du 20 novembre 2026 arrivait et il fallait l&#x27;anticiper. Ici, une réforme publiée ne s&#x27;appliquera jamais sous cette forme.<br><b>Un support présentant les articles 710-1 et suivants comme le droit en vigueur serait FAUX.</b> À l&#x27;examen, la réponse attendue reste le décret de 1955.</p></div></div>
+<div class="enc"><h2>UN EXEMPLE DE CE QUI AURAIT CHANGÉ</h2><div class="enc ci"><p>Les <b>baux de plus de douze ans</b> n&#x27;auraient plus été soumis à publicité foncière: seuls seraient restés concernés ceux <b>créant un droit réel pour le</b> <b>preneur</b> (bail à construction, bail emphytéotique). <b>Ce n&#x27;est pas le droit applicable.</b></p></div></div>
+<div class="enc"><p><b>CE QUI TOMBE À L&#x27;EXAMEN</b></p><p>• Texte applicable: <b>décret n° 55-22 du 4 janvier 1955</b>.<br>• Effet principal: l&#x27;<b>opposabilité aux tiers</b>. Elle <b>n&#x27;est PAS constitutive de droits</b>.<br>• Deux ventes successives: l&#x27;emporte le <b>premier PUBLIÉ</b>, non le premier signé.<br>• Le <b>SPF</b> a succédé au conservateur des hypothèques le <b>1 er janvier 2013</b>.<br>• <b>Effet relatif</b>: pas de publication sans titre du disposant préalablement publié. Maillon manquant → publication refusée.<br>• <b>Authenticité</b>: acte notarié en principe requis pour publier.<br>• Le <b>rang</b> se détermine par la <b>date d&#x27;inscription</b>.<br>• <b>Même jour</b>: c&#x27;est la <b>date du TITRE</b> qui prime, pas l&#x27;heure de dépôt.<br>•</p><div class="enc ok"><p>L&#x27;ordonnance du <b>19 juin 2024</b> est publiée mais <b>CADUQUE</b> — faute de ratification déposée avant le 20 septembre 2024.</p></div></div>
+<div class="enc"><p><b>Sources vérifiées au 19 août 2026, mises à jour le 18 novembre 2026.</b> <i>Décret n° 55-22 du 4 janvier 1955 portant réforme de la publicité foncière, dont son article 3 (effet relatif) et la</i> <i>disposition réglant le rang des formalités du même jour, modifiée par l&#x27;ordonnance n° 2021-1192 du 15 septembre 2021, art. 35 · décret n° 55-1350 du 14 octobre 1955 (application) ·</i> <i>ordonnance n° 2024-562 du 19 juin 2024 et son rapport au Président de la République,</i> <b>caduque</b> <i>faute de dépôt du projet de loi de ratification avant le 20 septembre 2024 (Constitution, art.</i> <i>38; Banque des Territoires et Defrénois, 3 octobre 2024) · loi n° 2023-1059 du 20 novembre 2023, art. 51 (habilitation) · ordonnance n° 2021-1192 du 15 septembre 2021 (droit des sûretés)</i> <i>· arrêté du 18 juillet 2022, annexe A. La date de succession du SPF au conservateur des hypothèques et la liste des actes soumis à publicité proviennent de sources secondaires concordantes.</i> <b>Réserves</b> <i>: la référence exacte de la disposition réglant le rang des formalités du même jour n&#x27;est pas citée ici; la décision jurisprudentielle sur le défaut de publicité d&#x27;un acte non énuméré</i> <i>provient d&#x27;une source secondaire et n&#x27;est pas citée par son pourvoi.</i> <b>POINT DE MAINTENANCE</b> <i>: vérifier avant chaque session qu&#x27;aucun texte de reprise de la réforme n&#x27;a été adopté.</i></p></div>
+</main>
+<footer>TMK Performances - N° Siret : 49841924100027 - Code NAF : 8559A</footer>
+</body></html>
